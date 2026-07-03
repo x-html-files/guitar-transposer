@@ -65,18 +65,18 @@ function Fret({
     className += " marked";
   }
 
-  const el = isEditable ? (
-    <div className={className} onClick={handleClick}>
-      {isOn && !hideOctave ? <span>{note.octave}</span> : ""}
-      {isOn ? <span>{notes[note.number]}</span> : " "}
-    </div>
-  ) : (
-    <div className={className}>
-      <span>
-        {isSet || isText ? note.octave + "" + notes[note.number] : " "}
-      </span>
-    </div>
-  );
+  // const el = isEditable ? (
+  //   <div className={className} onClick={handleClick}>
+  //     {isOn && !hideOctave ? <span>{note.octave}</span> : ""}
+  //     {isOn ? <span>{notes[note.number]}</span> : " "}
+  //   </div>
+  // ) : (
+  //   <div className={className}>
+  //     <span>
+  //       {isSet || isText ? note.octave + "" + notes[note.number] : " "}
+  //     </span>
+  //   </div>
+  // );
 
   return (
     <div className={className} onClick={handleClick}>

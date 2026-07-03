@@ -1,7 +1,6 @@
 import "./App.css";
 import Neck from "./components/Neck";
 import { useState } from "react";
-import { tunings } from "./data/tunings";
 
 function App() {
   const defaultSettings = {
@@ -26,15 +25,13 @@ function App() {
 
   const stringSettings2 = "King Gizzard C# tuning";
 
-  const isEditable = true;
-
   function notesCallBack(note, remove) {
     if (remove) {
       //console.log("unfiltered", notesToShow);
       //console.log("to delete", note);
 
       var filtered = notesToShow.filter(
-        (p) => p.number != note.number || p.octave != p.octave
+        (p) => p.number !== note.number || p.octave !== note.octave
       );
       //console.log("filtered", filtered);
       setNotesToShow(filtered);
@@ -92,43 +89,6 @@ function App() {
     <div className="App">
       <h1>Guitar Transposer</h1>
       <div className="container">
-        {/* <div className="settings-main">
-          <fieldset>
-            <input
-              type="checkbox"
-              checked={ignoreOctaves}
-              onChange={handleIgnoreOctaves}
-              name="octv"
-              id="octv"
-            />
-            <label htmlFor="octv">Ignore octaves</label>
-          </fieldset>
-          <fieldset>
-            <input
-              type="checkbox"
-              checked={hideOctaves}
-              onChange={handleHideOctaves}
-              name="hideoctv"
-              id="hideoctv"
-            />
-            <label htmlFor="hideoctv">Hide octaves</label>
-          </fieldset>
-          <fieldset>
-            <label htmlFor="frets">Number of frets: </label>
-            <input
-              type="number"
-              value={numberOfFrets}
-              onChange={handleFrets}
-              name="frets"
-              id="frets"
-              className="number"
-            />
-          </fieldset>
-          <fieldset>
-            <button onClick={handleClearAll}>Clear all selected notes</button>
-          </fieldset>
-        </div> */}
-
         <Neck
           key="neck1"
           tuning={stringSettings1}

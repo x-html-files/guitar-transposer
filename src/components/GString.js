@@ -27,12 +27,12 @@ function GString({
 
   const noteIsFound = (note) => {
     if (ignoreOctaves) {
-      return notesToShow.findIndex((p) => p.number == note.number) >= 0;
+      return notesToShow.findIndex((p) => p.number === note.number) >= 0;
     }
 
     return (
       notesToShow.findIndex(
-        (p) => p.number == note.number && p.octave == note.octave
+        (p) => p.number === note.number && p.octave === note.octave
       ) >= 0
     );
   };

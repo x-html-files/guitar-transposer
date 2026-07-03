@@ -126,7 +126,7 @@ function Neck({
                 name="octv"
                 id="octv"
               />
-              <label htmlFor="octv">Ignore octaves</label>
+              <label htmlFor="octv">Show all octaves</label>
             </fieldset>
             <fieldset>
               <input
@@ -136,7 +136,7 @@ function Neck({
                 name="hideoctv"
                 id="hideoctv"
               />
-              <label htmlFor="hideoctv">Hide octaves</label>
+              <label htmlFor="hideoctv">Hide octave numbers</label>
             </fieldset>
             <fieldset>
               <label htmlFor="frets">Number of frets: </label>

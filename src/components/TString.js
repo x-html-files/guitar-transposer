@@ -1,8 +1,3 @@
-import React from "react";
-import Fret from "./Fret";
-import NoteSelect from "./NoteSelect";
-import { useState, useEffect } from "react";
-
 function TString({ numberOfFrets }) {
   let frets = [];
 
